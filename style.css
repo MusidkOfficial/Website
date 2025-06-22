@@ -1,0 +1,199 @@
+/* --- Global Styles --- */
+:root {
+    /* Define color variables for easy changes later */
+    --color-dark-bg: #1a1a1a;        /* Very dark grey, almost black */
+    --color-light-text: #f0f0f0;     /* Off-white for text on dark backgrounds */
+    --color-accent-bronze: #CD7F32;  /* Muted bronze/gold accent */
+    --color-main-content-bg: #ffffff; /* Pure white for main content blocks */
+    --color-dark-text: #333;         /* Dark grey for text on light backgrounds */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif; /* Clean, readable sans-serif font */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-dark-bg); /* Use dark background */
+    color: var(--color-light-text); /* Use light text color */
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    padding: 1.5rem 0; /* Increased padding */
+    text-align: center;
+    border-bottom: 3px solid var(--color-accent-bronze); /* Subtle bronze line */
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif; /* Elegant serif font for artist name */
+    margin: 0;
+    font-size: 3.5rem; /* Larger and more impactful */
+    letter-spacing: 3px; /* More space for dramatic effect */
+    color: var(--color-accent-bronze); /* Bronze accent for the name */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px; /* More space from title */
+}
+
+nav ul li {
+    display: inline-block; /* Use inline-block for better spacing control */
+    margin: 0 20px; /* Increased space between nav items */
+}
+
+nav ul li a {
+    color: var(--color-light-text); /* Light text color for links */
+    text-decoration: none;
+    font-weight: 600; /* Slightly bolder */
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+    position: relative; /* For underline effect */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px; /* Position underline below text */
+    left: 0;
+    background-color: var(--color-accent-bronze); /* Bronze underline */
+    transition: width 0.3s ease-out;
+}
+
+nav ul li a:hover {
+    color: var(--color-accent-bronze); /* Bronze color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover */
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 40px; /* Generous padding around content */
+    max-width: 1000px; /* Wider content area */
+    margin: 40px auto; /* Center the main content block with more vertical space */
+    background-color: var(--color-main-content-bg); /* White background for content */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    border-radius: 12px; /* More rounded corners */
+    color: var(--color-dark-text); /* Dark text color for content */
+}
+
+/* --- Section Styles --- */
+section {
+    margin-bottom: 40px; /* More space between sections */
+    padding-bottom: 30px; /* Padding at the bottom of each section */
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1); /* Lighter, dashed border */
+}
+
+section:last-child {
+    border-bottom: none; /* Remove border from the last section */
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+section h2, section h3 {
+    font-family: 'Playfair Display', serif; /* Apply elegant serif to section headings */
+    color: var(--color-accent-bronze); /* Bronze color for section headings */
+    border-bottom: 2px solid var(--color-accent-bronze); /* Bronze underline */
+    padding-bottom: 10px; /* More space below heading text */
+    margin-bottom: 25px; /* More space below section headings */
+    font-weight: bold;
+}
+
+section h2 {
+    font-size: 2.2rem;
+}
+
+section h3 {
+    font-size: 1.6rem;
+    margin-top: 30px; /* Space for sub-headings */
+}
+
+/* Paragraphs within sections */
+section p {
+    font-size: 1.05rem; /* Slightly larger text for readability */
+    margin-bottom: 1em;
+}
+
+/* List styles within sections (for music and contact) */
+section ul {
+    list-style: disc; /* Keep bullet points for clarity in content */
+    padding-left: 25px; /* Indent list items */
+    margin-bottom: 20px;
+}
+
+section ul li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+
+/* --- Image Styles --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto; /* More vertical space for images */
+    border-radius: 12px; /* More rounded corners for images */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger, softer shadow for images */
+    object-fit: cover; /* Ensures images cover their area without distortion */
+}
+
+/* --- Link Styles within content (e.g., in music/contact sections) --- */
+main a {
+    color: var(--color-accent-bronze); /* Bronze color for links */
+    text-decoration: none; /* No underline by default */
+    font-weight: bold; /* Make content links bold */
+    transition: text-decoration 0.3s ease; /* Smooth transition for hover */
+}
+
+main a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--color-dark-bg);
+    color: var(--color-light-text);
+    text-align: center;
+    padding: 1.5rem 0; /* Increased padding */
+    margin-top: 50px; /* More space above the footer */
+    border-top: 5px solid var(--color-accent-bronze); /* Strong bronze line above footer */
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: var(--color-accent-bronze); /* Bronze color for footer links */
+    text-decoration: none;
+    margin: 0 15px; /* More space between footer links */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--color-light-text); /* White on hover for footer links */
+}
+
+/* --- Specific placeholders (for visual clarity, temporary) --- */
+.music-player-placeholder,
+.mailing-list-placeholder {
+    background-color: rgba(205, 127, 50, 0.1); /* Very light bronze background */
+    padding: 30px;
+    text-align: center;
+    border: 2px dashed var(--color-accent-bronze); /* Bronze dashed border */
+    margin: 30px 0;
+    font-style: italic;
+    color: var(--color-dark-text); /* Dark text for placeholders */
+    font-size: 1.2rem;
+    border-radius: 8px;
+}
