@@ -162,18 +162,18 @@ h2 {
   padding: 1rem;
   text-align: center;
 }
-.card-front {
-  background: #111;
-}
+ 
+  
+
 .card-back {
   background: #ff5f5f;
   color: #000;
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
   flex-direction: column;
   gap: 1rem;
 }
 .music-card:hover .card-front {
-  transform: rotateY(180deg);
+  transform: rotateY(0deg);
 }
 .music-card:hover .card-back {
   transform: rotateY(0);
