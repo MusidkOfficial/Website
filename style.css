@@ -15,6 +15,17 @@ body {
 
 
 /* ========= Header ========= */
+/* All Links */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff5f5f;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -45,13 +56,9 @@ nav ul {
 }
 
 nav a {
-  color: #fff;
   font-weight: 500;
 }
 
-nav a:hover {
-  color: #ff5f5f;
-}
 
 /* ========= Hero ========= */
 #hero {
@@ -108,6 +115,7 @@ button:hover {
   transform: scale(1.05);
 }
 
+
 /* ========= Sections ========= */
 section {
   padding: 5rem 2rem;
@@ -131,6 +139,7 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* ========= Music Card ========= */
 .music-card {
@@ -157,11 +166,17 @@ h2 {
   text-align: center;
 }
 
+/* Make sure the image scales to fit the card */
+.music-card .card-face img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Style for the front of the card (the default visible side) */
 .card-front {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  /* The front side is initially visible (no rotation) */
   transform: rotateY(0deg);
 }
 
@@ -169,7 +184,6 @@ h2 {
 .card-back {
   background: #ff5f5f;
   color: #000;
-  /* The back side is initially rotated 180 degrees, so it's hidden */
   transform: rotateY(180deg);
   flex-direction: column;
   gap: 1rem;
@@ -177,82 +191,9 @@ h2 {
 
 /* On hover, flip the card to show the back */
 .music-card:hover .card-front {
-  /* When hovering, the front rotates 180 degrees and becomes hidden */
   transform: rotateY(180deg);
 }
 
 /* On hover, flip the card to show the back */
 .music-card:hover .card-back {
-  /* When hovering, the back rotates back to 0 degrees and becomes visible */
-  transform: rotateY(0deg);
-}
-
-.pre-save {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: #000;
-  color: #fff;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.pre-save:hover {
-  background: #222;
-}
-
-/* ========= Bio ========= */
-#bio img {
-  display: block;
-  max-width: 150px;
-  margin: 2rem auto 0;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-
-/* ========= Contact ========= */
-#contact ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-#contact li {
-  margin: 0.5rem 0;
-}
-#contact a {
-  font-size: 1.1rem;
-}
-
-/* ========= Footer ========= */
-footer {
-  background: #111;
-  padding: 1.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-  border-top: 1px solid #333;
-}
-
-/* ========= Policy & TOS Pages ========= */
-.policy-page, .tos-page {
-  padding: 6rem 2rem 4rem;
-  max-width: 1000px;
-  margin: auto;
-}
-.policy-page h1, .tos-page h1 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.policy-page h2, .tos-page h2 {
-  font-size: 1.4rem;
-  margin: 1.5rem 0 0.8rem;
-}
-.policy-page p, .tos-page p, 
-.policy-page li, .tos-page li {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #ddd;
-}
-.policy-page ul, .tos-page ul {
-  padding-left: 1.2rem;
-  list-style: disc;
-}
+  transform:
