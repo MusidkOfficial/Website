@@ -5,10 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Musidk | Official Website</title>
   <meta name="description" content="Official website of Musidk, independent artist and singer-songwriter. Debut single 'Gone by Tomorrow' out November 14, 2025.">
+  
+  <!-- Favicon -->
+<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="Images/apple-touch-icon.png">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Musidk | Official Website">
+<meta property="og:description" content="Debut single 'Gone by Tomorrow' out Nov 14, 2025.">
+<meta property="og:image" content="Images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+
+  
+
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <!-- Header -->
+  <header id="header">
     <h1>Musidk</h1>
     <nav>
       <ul>
@@ -19,42 +35,63 @@
     </nav>
   </header>
 
-  <main>
-    <section id="hero">
+  <!-- Hero Section -->
+  <section id="hero" class="fade-in">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="Images/musidk logo.jpg.png" alt="Musidk Logo" class="hero-logo">
       <h2>Debut Single Out Nov 14</h2>
-      <p>Welcome to the official site of <strong>Musidk</strong> — an independent artist and singer-songwriter. Known for heartfelt ballads and raw vocals, Musidk’s music captures the ache of memory, loss, and love.</p>
-      <p>The debut single <em>“Gone by Tomorrow”</em> is coming <strong>November 14, 2025</strong>.</p>
-    </section>
+      <p><strong>Gone by Tomorrow</strong> — the beginning of Musidk’s journey.</p>
+      <button onclick="scrollToSection('music')">Discover More</button>
+    </div>
+  </section>
 
-    <section id="music">
+  <!-- Main -->
+  <main>
+    <!-- Music Section -->
+    <section id="music" class="fade-in">
       <h2>Music</h2>
-      <p>Musidk’s songs blend vulnerable lyrics with haunting melodies. The debut single <em>“Gone by Tomorrow”</em> marks the beginning of a series of releases leading into the first album, <em>When the Silence Calls Out Your Name</em> (2026).</p>
-      <p>Stay tuned — this is just the start.</p>
+      <div class="music-card">
+        <div class="card-front">
+          <p>Coming Soon</p>
+        </div>
+        <div class="card-back">
+          <p><em>Gone by Tomorrow</em> out Nov 14, 2025</p>
+          
+        </div>
+      </div>
     </section>
 
-    <section id="bio">
+    <!-- Bio Section -->
+    <section id="bio" class="fade-in">
       <h2>About</h2>
       <p>Musidk is an independent artist whose music lives in the quiet moments — a voice cracked by emotion, lyrics that cut deep, and melodies that linger.</p>
-      <p>With a minimalist, melancholic sound, Musidk creates songs that resonate with listeners who crave honesty and intimacy in music. This is not about image — it’s about connection.</p>
+      <p>With a minimalist, melancholic sound, Musidk creates songs that resonate with listeners who crave honesty and intimacy in music.</p>
       <img src="Images/musidk-logo.jpg" alt="Musidk official logo">
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in">
       <h2>Connect</h2>
-      <p>For inquiries, collaborations, or press, reach out via:</p>
       <ul>
         <li>Email: <a href="mailto:realmusidk@gmail.com">realmusidk@gmail.com</a></li>
-        <li>YouTube: <a href="https://www.youtube.com/@MusidkOfficial" target="_blank">MusidkOfficial</a></li>
-        <li>Spotify: <a href="https://open.spotify.com/artist/090PpYtpdS3qGA1VlxblF1?si=mYRK1btYQbmFb2G3sS07UQ" target="_blank">Musidk</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/musidkofficial/" target="_blank">@musidkofficial</a></li>
-        <li>X (formerly Twitter): <a href="https://x.com/musidkofficial" target="_blank">@musidkofficial</a></li>
+        <li><a href="https://www.youtube.com/@MusidkOfficial" target="_blank">YouTube</a></li>
+        <li><a href="https://open.spotify.com/artist/090PpYtpdS3qGA1VlxblF1?si=mYRK1btYQbmFb2G3sS07UQ" target="_blank">Spotify</a></li>
+        <li><a href="https://www.instagram.com/musidkofficial/" target="_blank">Instagram</a></li>
+        <li><a href="https://x.com/musidkofficial" target="_blank">X (Twitter)</a></li>
       </ul>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Musidk. All rights reserved.</p>
-    <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-of-service.html">Terms of Service</a></p>
-  </footer>
+  <!-- Footer -->
+ <footer>
+  <p>&copy; 2025 Musidk. All rights reserved. | 
+    <a href="privacy-policy.html">Privacy Policy</a> | 
+    <a href="terms-of-service.html">Terms of Service</a>
+  </p>
+</footer>
+
+
+  <script src="script.js"></script>
 </body>
 </html>
