@@ -144,7 +144,7 @@ h2 {
 /* ========= Music Card ========= */
 .music-card {
   width: 250px;
-  height: 180px;
+  height: 250px;
   perspective: 1000px;
   margin: 2rem auto;
   position: relative;
@@ -163,39 +163,46 @@ h2 {
   border: 2px solid #fff;
   border-radius: 10px;
   transition: transform 0.8s;
-  padding: 1rem;
   text-align: center;
 }
 
-/* Make sure the image scales to fit the card */
 .music-card .card-face img {
   width: 100%;
   height: auto;
-  display: block;
+  border-radius: 8px;
 }
 
-/* Style for the front of the card (the default visible side) */
 .card-front {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
   transform: rotateY(0deg);
+  position: relative;
+  padding: 0;
 }
 
-/* Style for the back of the card (initially rotated away from view) */
+.coming-soon {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
 .card-back {
   background: #ff5f5f;
   color: #000;
   transform: rotateY(180deg);
   flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
 }
 
-/* On hover, flip the card to show the back */
 .music-card:hover .card-front {
   transform: rotateY(180deg);
 }
 
-/* On hover, flip the card to show the back */
 .music-card:hover .card-back {
   transform: rotateY(0deg);
 }
@@ -209,6 +216,7 @@ h2 {
   font-weight: bold;
   transition: background 0.3s;
 }
+
 .pre-save:hover {
   background: #222;
 }
