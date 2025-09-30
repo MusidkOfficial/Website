@@ -82,6 +82,10 @@ nav a {
   position: relative;
   z-index: 2;
   max-width: 700px;
+  /* FIX: Ensures the card is centered vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-logo {
@@ -148,6 +152,7 @@ h2 {
   perspective: 1000px;
   margin: 2rem auto;
   position: relative;
+  /* FIX: Required for the 3D flip to work correctly */
   transform-style: preserve-3d;
 }
 
@@ -167,6 +172,7 @@ h2 {
 }
 
 .music-card .card-face img {
+  /* FIX: Ensures image fits the card container */
   width: 100%;
   height: auto;
   border-radius: 8px;
@@ -199,6 +205,7 @@ h2 {
   padding: 1rem;
 }
 
+/* FIX: Flip transitions on hover */
 .music-card:hover .card-front {
   transform: rotateY(180deg);
 }
@@ -224,6 +231,7 @@ h2 {
 
 /* ========= Bio ========= */
 #bio img {
+  /* FIX: Ensures image is sized and maintains aspect ratio */
   display: block;
   max-width: 150px;
   height: auto;
@@ -257,7 +265,7 @@ footer {
 }
 
 
-/* ========= Policy & TOS Pages ========= */
+/* ========= Policy & TOS Pages (Placeholders) ========= */
 .policy-page, .tos-page {
   padding: 6rem 2rem 4rem;
   max-width: 1000px;
