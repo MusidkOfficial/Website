@@ -186,6 +186,29 @@ h2 {
   padding: 0;
 }
 
+/* --- NEW: Hover Prompt Styling --- */
+.hover-prompt {
+  position: absolute;
+  bottom: 0.5rem; /* Adjust distance from the bottom */
+  font-size: 0.8rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7); /* Subtle dark background */
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  opacity: 0.9;
+  font-weight: 500;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+/* Fades the prompt out when the card starts to flip */
+.music-card:hover .hover-prompt {
+    opacity: 0;
+}
+/* --- END NEW STYLING --- */
+
+
+/* NOTE: The .coming-soon rule is left here but is no longer used in the HTML */
 .coming-soon {
   position: absolute;
   bottom: 1rem;
