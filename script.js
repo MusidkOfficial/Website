@@ -45,21 +45,21 @@ const musidkSchema = {
     {
       "@type": "MusicAlbum",
       "name": "Blinded By Explosive Silence",
-      "albumReleaseType": "EP",
+      "albumReleaseType": "https://schema.org",
       "datePublished": "2026",
       "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
     },
     {
       "@type": "MusicAlbum",
       "name": "Even a Day",
-      "albumReleaseType": "Album",
+      "albumReleaseType": "https://schema.org",
       "datePublished": "2026",
       "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
     },
     {
       "@type": "MusicAlbum",
       "name": "Gone by Tomorrow",
-      "albumReleaseType": "Album",
+      "albumReleaseType": "https://schema.org",
       "datePublished": "2025",
       "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
     }
@@ -69,6 +69,4 @@ const musidkSchema = {
 const scriptTag = document.createElement('script');
 scriptTag.type = 'application/ld+json';
 scriptTag.text = JSON.stringify(musidkSchema);
-document.head.appendChild(scriptTag); 
-
-
+document.head.appendChild(scriptTag);
