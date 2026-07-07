@@ -26,3 +26,49 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+// Dynamically inject Musidk Schema Markup for Google Knowledge Graph
+const musidkSchema = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "@id": "https://github.io",
+  "name": "Musidk",
+  "url": "https://github.io",
+  "genre": "Indie-Pop",
+  "sameAs": [
+    "https://spotify.com",
+    "https://jiosaavn.com_",
+    "https://instagram.com",
+    "https://facebook.com"
+  ],
+  "album": [
+    {
+      "@type": "MusicAlbum",
+      "name": "Blinded By Explosive Silence",
+      "albumReleaseType": "EP",
+      "datePublished": "2026",
+      "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Even a Day",
+      "albumReleaseType": "Album",
+      "datePublished": "2026",
+      "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
+    },
+    {
+      "@type": "MusicAlbum",
+      "name": "Gone by Tomorrow",
+      "albumReleaseType": "Album",
+      "datePublished": "2025",
+      "byArtist": { "@type": "MusicGroup", "name": "Musidk" }
+    }
+  ]
+};
+
+const scriptTag = document.createElement('script');
+scriptTag.type = 'application/ld+json';
+scriptTag.text = JSON.stringify(musidkSchema);
+document.head.appendChild(scriptTag); 
+
+
