@@ -318,3 +318,52 @@ footer {
   padding-left: 1.2rem;
   list-style: disc;
 }
+/* Form Wrapper Base Layout */
+#musidk-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Fields & Inputs styling */
+#musidk-contact-form input, 
+#musidk-contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  background: #121212; /* Deep dark palette matching site */
+  border: 1px solid #333333;
+  color: #ffffff;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+#musidk-contact-form input:focus, 
+#musidk-contact-form textarea:focus {
+  outline: none;
+  border-color: #ffffff; /* Turns clean white when interacting */
+}
+
+/* Formspree Active Status Styles */
+[data-fs-error][data-fs-active],
+.field-error[data-fs-active] {
+  display: block;
+  color: #ff4a4a;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+[data-fs-success][data-fs-active] {
+  display: block;
+  padding: 15px;
+  background: #1c1c1c;
+  border-left: 3px solid #00ff66;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+/* Invalid Field Border highlight */
+[data-fs-field][aria-invalid='true'] {
+  border-color: #ff4a4a !important;
+}
